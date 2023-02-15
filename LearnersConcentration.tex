@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper,inner=1.5in,outer=1in,top=1.5in,bottom=1in]{geometry}
+\usepackage{fancyhdr}
+\fancyhf{}
+\fancyhead[LE]{\leftmark}
+%\fancyhead[RO]{\nouppercase{\rightmark}}
+\fancyfoot[C]{\thepage}
+\pagestyle{fancy}
+
+\usepackage{tocloft}
+
+\newcommand\frontmatter{
+\cleardoublepage
+\pagenumbering{roman}}
+
+\newcommand\mainmatter{\cleardoublepage
+\pagenumbering{arabic}}
+
+\usepackage{index}
+\makeindex
+
+\usepackage[authoryear]{natbib}
+
+\usepackage{hyperref}
+
+\usepackage{multicol}
+
+\usepackage{acronym}
+
+
+\begin{document}
+
+\begin{titlepage}
+\raggedright
+{\Large Farzan \\}
+{\Large Learner's Concentration \\}
+\end{titlepage}
+
+\frontmatter
+\begin{multicols}{2}
+\section*{Declaration}
+\section*{Acknowledgement}
+\section*{Abstract}
+\end{multicols}
+\newpage
+\tableofcontents
+\listoffigures
+\listoftables
+\section*{List of Acronyms}
+\input{acro}
+\mainmatter
+\begin{multicols}{2}
+\section{Introduction}
+\ac{P2P}
+\section{chapters}
+\acf{P2P}
+\section{Critical Analysis of Work}
+\ac{P2P}
+\section{Conclusion and Future Work}
+Hello World! This is my first \LaTeX\ document\,\citet{marouane2015towards}.Hello World! This is my first \LaTeX\ document.Hello World! This is my first \LaTeX\ document.Hello World! This is my first \LaTeX\ document\index{network}.Hello World! This is my first \LaTeX\ document.Hello World! This is my first \LaTeX\ document.Hello World!\index{Hello World} This is my first \LaTeX\ document.Hello World! This is my first \LaTeX\ document.Hello World! This is my first \LaTeX\ document.Hello World! This is my first \LaTeX\ document.Hello World! This is my first \LaTeX\ document.Hello World! This is my first \LaTeX\ document.Hello World! This is my first \LaTeX\ document.Hello World! This is my first \LaTeX\ document.Hello World! This is my first \LaTeX\ document.Hello World! This is my first \LaTeX\ document.Hello World! This is my first \LaTeX\ document.Hello World! This is my first \LaTeX\ document.\citep{marouane2015towards}
+\end{multicols}
+\bibliographystyle{agsm}
+\bibliography{tex}
+\clearpage
+\addcontentsline{toc}{section}{Index}
+\printindex
+\end{document}
